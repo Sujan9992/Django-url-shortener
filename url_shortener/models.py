@@ -8,7 +8,7 @@ class Shortener(models.Model):
 
     times_followed = models.PositiveIntegerField(default=0)    
 
-    long_url = models.URLField()
+    long_url = models.URLField(max_length=400)
 
     short_url = models.CharField(max_length=15, unique=True, blank=True)
 
